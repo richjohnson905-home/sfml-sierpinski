@@ -1,7 +1,7 @@
-cmake_minimum_required(VERSION 3.6)
+cmake_minimum_required(VERSION 3.10)
 project(sfml-sierpinski)
 
-find_package(SFML 2.5 COMPONENTS system window graphics REQUIRED)
+find_package(SFML 3.0 COMPONENTS Graphics Window System REQUIRED)
 
 add_executable(sfml-sierpinski src/main.cpp)
 
@@ -25,4 +25,4 @@ target_compile_definitions(sfml-sierpinski
 
 target_link_libraries(sfml-sierpinski
                       PRIVATE
-                      sfml-graphics)
+                      SFML::Graphics)
